@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Show all people</title>
+</head>
+<body>
+<div th:each="person : ${personList}">
+    <a th:href="@{/showPersons/{id}(id=${person.getId()})}" th:text="${person.name}">Person</a>
+
+</div>
+<br/>
+<br/>
+<a th:href="@{/newperson/}" >Create new person</a>
+<br/>
+<br/>
+<a th:href="@{/showActions}">List of actions</a>
+<!--  <div class="container">-->
+<!--      <div class="row">-->
+<!--          <label for="each">-->
+<!--              <table id="each">-->
+<!--                  <tr th:each="person : ${personList}">-->
+<!--                      <td th:text="${person.name}"></td>-->
+<!--                      <br/>-->
+<!--                      <td th:text="${person.phone}"></td>-->
+<!--                      <br/>-->
+<!--                      <td th:text="{person.address}"></td>-->
+<!--                      <br/>-->
+
+<!--                  </tr>-->
+<!--              </table>-->
+<!--          </label>-->
+<!--      </div>-->
+<!--  </div>-->
+</body>
+</html>

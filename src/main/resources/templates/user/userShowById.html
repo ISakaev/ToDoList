@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Action</title>
+</head>
+<body>
+<p th:text="${user.username}">Name</p>
+<!--<p th:text="${user.password}">Password</p>-->
+<div th:each="role : ${user.roles}">
+<a  th:text="${role.name}">Role</a>
+</div>
+<br/>
+<a th:href="@{/deleteUsers/{id} (id = ${user.id})}"  th:text="DELETE">User</a>
+<br/>
+<a th:href="@{/admin}">List of user</a>
+</body>
+</html>

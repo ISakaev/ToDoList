@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin page</title>
+</head>
+<body>
+Page only for admin
+<br/>
+<div th:each="user : ${userList}">
+    <a th:href="@{/showUsers/{id} (id = ${user.id})}"  th:text="${user.username}">User</a>
+</div>
+<br/>
+<a href="/"> Главная страница </a>
+<br/>
+<a href="/logout"> Log out </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Action</title>
+</head>
+<body>
+<p th:text="${action.description}">Name</p>
+<p th:text="${action.person.name}">Name</p>
+<p th:text="${action.person.phone}">Phone</p>
+<p th:text="${action.person.address}">Address</p>
+<br/>
+<a th:href="@{/showActions}">List of actions</a>
+</body>
+</html>

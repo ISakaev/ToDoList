@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>New action</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/createaction/}" th:object = "${action}">
+
+    <label for="description"> Enter description: </label>
+    <input type="text" th:field="*{description}" id="description">
+    <br/>
+    <br/>
+    <label for="name"> Enter name of Person: </label>
+    <input type="text" th:field="*{person.name}" id="name">
+    <br/>
+    <br/>
+    <label for="phone"> Enter phone of Person: </label>
+    <input type="text" th:field="*{person.phone}" id="phone">
+    <br/>
+    <br/>
+    <label for="address"> Enter address of Person: </label>
+    <input type="text" th:field="*{person.address}" id="address">
+    <br/>
+    <br/>
+    <input type="submit" value="Create">
+</form>
+
+</body>
+</html>

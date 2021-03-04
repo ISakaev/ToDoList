@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title><Hello></Hello></title>
+</head>
+<body>
+<h1>Welcome to Spring Boot Security demo</h1>
+<br/>
+<!--<h4><a href="/login"> Войти </a></h4>-->
+<!--<h4><a href="/registration"> Регистрация </a></h4>-->
+<!--<h4><a href="/showActions">Список дел (только пользователь)</a></h4>-->
+<h4><a th:href="@{showActions}">Список дел (только пользователь)</a></h4>
+<!--<h4><a href="/admin">Пользователи (только админ)</a></h4>-->
+<h4><a th:href="@{admin}">Пользователи (только админ)</a></h4>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Show all actions</title>
+</head>
+<body>
+<div th:each="action : ${actionList}">
+    <a th:href="@{/showActions/{id} (id = ${action.id})}"  th:text="${action.description}">Action</a>
+</div>
+
+<br/>
+<a th:href="@{/newaction/}" >Create new action</a>
+<br/>
+<a th:href="@{/newperson/}" >Create new person</a>
+<br/>
+<a th:href="@{/showPersons/}" >Show list of persons</a>
+<br/>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+</body>
+</html>
